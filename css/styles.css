@@ -1,8 +1,21 @@
+/* 
+color 1: #2e0007;
+color 2: #fa0025;
+color 3: #4287f5;
+*/
+
+
+
 * {
     box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
 }
 
 body {
     background: #46704e;
     color: ghostwhite;
+    font-family: 'Roboto', sans-serif;
 }
