@@ -2,20 +2,32 @@
 color 1: #2e0007;
 color 2: #fa0025;
 color 3: #4287f5;
+-colors are still being experimented with! That's why these and the variable colors are different right now.
 */
 
 
+:root {
+    --primary-color: ;
+    --secondary-color: #F96167;
+    --tertiary-color: #FCE77D;
+
+}
 
 * {
     box-sizing: border-box;
 }
+
 
 h1 {
     font-family: 'Orbitron', sans-serif;
 }
 
 body {
-    background: #46704e;
-    color: ghostwhite;
+    background: #990011;
+    color: #FCF6F5;
     font-family: 'Roboto', sans-serif;
+}
+
+.navigation-item {
+    list-style-type: none;
 }
