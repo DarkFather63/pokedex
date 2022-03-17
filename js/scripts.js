@@ -10,12 +10,20 @@ let pokemonRepository = (function(){
 	{ name: 'Gengar', type: ['ghost', 'poison' ], height: 3}
 	];
 
+	pokemonList.forEach(function getPokemonList(pokemon){
+	if (pokemon.height < 5){
+	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type + '<br/>');
+} else if(pokemon.height > 5){
+	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type  + ' Wow, that\'s big!' + '<br/>')
+}
+});
+
 	return {
 		getAll: function(){
-			return pokemonList;
+			return (pokemonList.name + pokemonList.type);
 		},
-		add: function(){
-			pokemonList.push(pokemon)
+		add: function(pokemon){
+			return pokemonList.push(pokemon)
 		}
 
 	};
@@ -23,22 +31,28 @@ let pokemonRepository = (function(){
 
 })();
 
-//trying to access IIFE with forEach - this is still unfinished!!
+console.log(pokemonRepository.getAll);
 
-pokemonRepository.getAll().forEach(function(pokemon){
-	document.write(pokemon.pokemonList)
-});
+//getPokemonList(pokemon);
+
+
+
+//trying to access IIFE with forEach - this is still unfinished!!
+/*
+pokemonRepository.getAll().forEach(function(getAll){
+	document.write(pokemonList)
+});*/
 
 
 //pokemon forEach loop - not yet edited for IIFE
-
+/*
 pokemonList.forEach(function(pokemon){
 	if (pokemon.height < 5){
 	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type + '<br/>');
 } else if(pokemon.height > 5){
 	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type  + ' Wow, that\'s big!' + '<br/>')
 }
-});
+}); */
 
 
 
