@@ -33,26 +33,7 @@ let pokemonRepository = (function(){
 
 console.log(pokemonRepository.getAll);
 
-//getPokemonList(pokemon);
 
-
-
-//trying to access IIFE with forEach - this is still unfinished!!
-/*
-pokemonRepository.getAll().forEach(function(getAll){
-	document.write(pokemonList)
-});*/
-
-
-//pokemon forEach loop - not yet edited for IIFE
-/*
-pokemonList.forEach(function(pokemon){
-	if (pokemon.height < 5){
-	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type + '<br/>');
-} else if(pokemon.height > 5){
-	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type  + ' Wow, that\'s big!' + '<br/>')
-}
-}); */
 
 
 
