@@ -1,5 +1,5 @@
 //creates a data array storing pokemon data
-//added IIFE 
+//added IIFE function
 
 let pokemonRepository = (function(){
 
@@ -13,20 +13,24 @@ let pokemonRepository = (function(){
 	return {
 		getAll: function(){
 			return pokemonList;
+		},
+		add: function(){
+			pokemonList.push(pokemon)
 		}
+
 	};
 
 
-})()
+})();
 
-//second data array for storing pokemon (and for trying functions)
-/*let pokemonList2 = [
-{ name: 'Ivysaur', type: ['grass', 'poison'], height: 1} ,
-{ name: 'Onix', type: ['rock', 'ground'], height: 10} ,
-{ name: 'Piplup', type: 'water', height: 0.5} ,
-{ name: 'Musharna', type: 'psychic', height: 3}
-];*/
+//trying to access IIFE with forEach - this is still unfinished!!
 
+pokemonRepository.getAll().forEach(function(pokemon){
+	document.write(pokemon.pokemonList)
+});
+
+
+//pokemon forEach loop - not yet edited for IIFE
 
 pokemonList.forEach(function(pokemon){
 	if (pokemon.height < 5){
@@ -36,45 +40,7 @@ pokemonList.forEach(function(pokemon){
 }
 });
 
-//list of pokemon and their height, with largest noted under conditional - also using loop
 
-/* for (let i=0; i < pokemonList.length; i++)
-	if(pokemonList[i].height < 4){
-		document.write(pokemonList[i].name + '( height: ' + pokemonList[i].height + ')' + '<br/>')
-	} else if(pokemonList[i].height > 3){
-		document.write(pokemonList[i].name + '( height: ' + pokemonList[i].height + ')' + '-Wow, that\'s big!' + '<br/>')
-	} ;
-*/
-
-//testing function:
-
-/*function printArrayDetails(list) {
-	for (let i=0; i < list.length; i++)
-		if (list[i].height < 4) {
-			document.write(list[i].name + ' (height:' + list[i].height + ') ' + '<br/>')
-		} else if (list[i].height > 5){
-			document.write(list[i].name + ' (height:' + list[i].height + ') ' + ' Wow, that\'s big!' + '<br/>')
-		};
-}
-
-printArrayDetails(pokemonList);
-printArrayDetails(pokemonList2); */
-
-
-//testing / trying out basic function - can ignore
-/*function divide(dividend, divisor) {
-	if (divisor === 0) {
-		return 'You are trying to divide by zero.'
-	} else {
-		let result = dividend/divisor;
-		return result;
-	}
-}
-
-console.log(divide(10, 2));
-console.log(divide(7, 0));
-console.log(divide(1, 4));
-console.log(divide(12, -3));*/
 
 
 
