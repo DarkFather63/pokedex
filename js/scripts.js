@@ -19,10 +19,10 @@ let pokemonRepository = (function(){
 });
 
 	return {
-		getAll: function(){
-			return (pokemonList.name + pokemonList.type);
+		getAll: function (){
+			return (pokemonList);
 		},
-		add: function(pokemon){
+		add: function (pokemon){
 			return pokemonList.push(pokemon)
 		}
 
@@ -31,7 +31,9 @@ let pokemonRepository = (function(){
 
 })();
 
-console.log(pokemonRepository.getAll);
+console.log(pokemonRepository.getAll());
+
+
 
 
 
