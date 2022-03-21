@@ -10,13 +10,6 @@ let pokemonRepository = (function(){
 	{ name: 'Gengar', type: ['ghost', 'poison' ], height: 3}
 	];
 
-	pokemonList.forEach(function getPokemonList(pokemon){
-	if (pokemon.height < 5){
-	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type + '<br/>');
-} else if(pokemon.height > 5){
-	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type  + ' Wow, that\'s big!' + '<br/>')
-}
-});
 
 	return {
 		getAll: function (){
@@ -30,6 +23,14 @@ let pokemonRepository = (function(){
 
 
 })();
+
+pokemonRepository.getAll().forEach(function getPokemonList(pokemon){
+	if (pokemon.height < 5){
+	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type + '<br/>');
+} else if(pokemon.height > 5){
+	document.write(pokemon.name + ' (height: ' + pokemon.height + '),' + ' type: ' + pokemon.type  + ' -Wow, that\'s big!' + '<br/>')
+}
+});
 
 console.log(pokemonRepository.getAll());
 
