@@ -31,3 +31,10 @@ body {
 .navigation-item {
     list-style-type: none;
 }
+
+.pokemon-button {
+    background: var(--tertiary-color);
+    padding: 1em;
+    margin: 1em;
+    border-radius: 80%;
+}
