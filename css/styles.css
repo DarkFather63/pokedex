@@ -9,7 +9,8 @@ color 3: #4287f5;
 :root {
     --primary-color: ;
     --secondary-color: #F96167;
-    --tertiary-color: #FCE77D;
+    --tertiary-color: #3B4CCA;
+    --text-color: #ffffff;
 
 }
 
@@ -32,9 +33,14 @@ body {
     list-style-type: none;
 }
 
-.pokemon-button {
+.button {
     background: var(--tertiary-color);
+    color: var(--text-color);
     padding: 1em;
-    margin: 1em;
-    border-radius: 80%;
+    margin: 0.5em;
+    border-radius: 10px;
+}
+
+.list-item{
+    list-style-type: none;
 }
