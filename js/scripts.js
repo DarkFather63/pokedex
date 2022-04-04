@@ -10,6 +10,7 @@ let pokemonRepository = (function(){
 		return pokemonList;
 	};
 
+//allows addition of pokemon - restricted if they don't fit the format
 	function add(pokemon) {
 		if (typeof pokemon === 'object' && 'name' in pokemon && 'detailsUrl' in pokemon){
 			pokemonList.push(pokemon)
@@ -18,7 +19,8 @@ let pokemonRepository = (function(){
 		}
 	};
 
-//adds modal to each button with pokemon content.
+//adds modal to each button with pokemon content, and allows for modal to be hidden and shown via button and click
+
 	function showDetails(pokemon, content){
 		loadDetails(pokemon).then(function () {
 	    let modalContainer = document.querySelector('#pokemon-modal-container');
@@ -77,7 +79,7 @@ let pokemonRepository = (function(){
 	  });
 	};	
 
-//DOM manipulation - turns list into buttons and adds to it
+//DOM manipulation - turns list into buttons and adds to it using variables, querySelector, createElement, and an event listener.
 
 	function addListItem(pokemon) {
 		let pokemonUnorderedList = document.querySelector('.pokemon-list');
@@ -93,11 +95,17 @@ let pokemonRepository = (function(){
 		})
 	};
 
+
+	//calls on the showDetails function above (which also has modal properties)
+
 	function addListener (button, pokemon){
 		button.addEventListener('click', function(){
 			showDetails(pokemon);
 		})
 	};
+
+
+//fetches API info
 
 	function loadList() {
 	    return fetch(apiUrl).then(function (response) {

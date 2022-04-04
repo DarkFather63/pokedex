@@ -19,12 +19,18 @@ color 3: #4287f5;
 }
 
 
-h1 {
+h1, h2 {
     font-family: 'Orbitron', sans-serif;
 }
 
-h2 {
-    font-family: 'Orbitron', sans-serif;
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+a:hover , a:focus{
+    color: var(--secondary-color);
+    cursor: pointer;
 }
 
 body {
@@ -33,9 +39,31 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.page-header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-content: space-between;
+}
+
+.navigation-menu {
+    flex: 0 1 300px;
+}
+
+.page-header__item:last child {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
 .navigation-item {
     list-style-type: none;
 }
+
 
 .button {
     background: var(--tertiary-color);
@@ -43,6 +71,10 @@ body {
     padding: 1em;
     margin: 0.5em;
     border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .list-item{
@@ -87,6 +119,6 @@ body {
   -webkit-appearance: none;
   border: 0;
   background: none;
-  color: #777;
-  text-decoration: underline;
+  color: var(--text-color);
+  text-decoration: none;
 }

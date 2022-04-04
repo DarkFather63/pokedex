@@ -2,13 +2,13 @@
 
 <html>
 	
-	<head>
+	<head class="page-header">
 		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width initial-scale=1">
 
-		<title> 
-			Pokedex
+		<title class="main-title"> 
+			Pokedex App
 		</title>
 
 		<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -18,20 +18,27 @@
 
 	</head>
 	<body>
-		<header>
-			
-			<img src="img/logoipsum-logo-28.svg" alt="pokedex-logo">
+		<header class="page-header">
 
-			<nav class="navigation-menu">
-				<ul>
+			<a href="index.html">
+				<h1 class="page-header__title" alt="Pokedex logo">Pokedex</h1>		
+			</a>	
+			<nav class="navigation-menu page-header__item">
+				<ul role="menu" class="navigation-list">
 					<li class="navigation-item">
+						<a href="index.html">
 						Home
+						</a>
 					</li>
 					<li class="navigation-item">
+						<a href="#">
 						About
+						</a>
 					</li>
 					<li class="navigation-item">
+						<a href="#">
 						Index
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -39,7 +46,6 @@
 		</header>
 
 		<main>
-			<h1>Pokedex</h1>
 
 			<ul class="pokemon-list">
 				
@@ -59,6 +65,10 @@
 
 		</footer>
 
+	<script  
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+  		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  		crossorigin="anonymous"></script>	
 	<script type="js/promise-polyfill.js"></script>	
 	<script type="js/fetch-polyfill.js"></script>
 	<script src="js/scripts.js"></script>	
