@@ -27,7 +27,7 @@ let pokemonRepository = (function(){
 		});
 	}
 
-//adds modal to each button with pokemon content, and allows for modal to be hidden and shown via button and click
+//adds modal to each button with pokemon content, and allows for modal to be hidden and shown via button and click - uses bootstrap
 
 	function showModal(pokemon){
 		
@@ -48,14 +48,12 @@ let pokemonRepository = (function(){
 
 			let weightElement = $('<p>'+'Weight: '+pokemon.weight+'</p>');
 
-			let typeElement = $('<p>'+'Type: '+pokemon.types+'</p>');
-
 
 			modalTitle.append(nameElement);
 			modalBody.append(pokemonImage);
 			modalBody.append(heightElement);
 			modalBody.append(weightElement);
-			modalBody.append(typeElement);
+		
 
 			$('#pokemon-modal').modal('toggle')
 
@@ -118,7 +116,7 @@ let pokemonRepository = (function(){
 	    }).then(function (details) {
 	      pokemon.imageUrl = details.sprites.front_default;
 	      pokemon.height = details.height;
-	      pokemon.types = details.types;
+	      pokemon.weight = details.weight;
 	    }).catch(function (e) {
 	      console.error(e);
 	    });
