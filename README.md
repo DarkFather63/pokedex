@@ -1,8 +1,8 @@
-## Pokemon App
+# Pokemon App
 
-This is a pokemon app!
+This is a pokemon app! It uses a pokemon API and displays info about selected pokemon via the UI. Built using Javascript.
 
-###### DESCRIPTION:
+## DESCRIPTION:
 An app to be used as an index to find pokemon and retrieve some of their information. More information for pokemon will be added in the future.
 
 My task was the development of this app using minimal HTML and CSS and mostly relying on Javascript. Javascript was entirely new to me and this app was meant to reflect my new knowledge. I had to create and understand javascript elements, DOM traversal, IIFEs, functions and base functionality.
@@ -10,7 +10,7 @@ My task was the development of this app using minimal HTML and CSS and mostly re
 This app uses Javascript ES6 and later. 
 
 
-###### USE:
+## USE:
 This app is used based on a repository function retrieving data from an API as an IIFE. Within the IIFE are several functions that allow the app and users to access the details of pokemon, but don't allow disruption of the code that runs the app. They are:
 
 **pokemonRepository** - The main IIFE - contains all the functions needed for the app to operate.
@@ -27,7 +27,13 @@ This app is used based on a repository function retrieving data from an API as a
 
 **showModal** - Using bootstrap's modal properties, constructs a modal to display the pokemon information. It also uses jQuery code.
 
-The API: A pokemon open-source API, at https://pokeapi.co/api/v2/pokemon/?limit=150 . This only shows 150 pokemon - change the number after 'limit=' to any number if you want to see more or less. The pokemon are in the order written in the API, though, so it will only add or subtract those that are later in the API.
+## The API: 
+
+A pokemon open-source API, at https://pokeapi.co/api/v2/pokemon/?limit=150 . This only shows 150 pokemon - change the number after 'limit=' to any number if you want to see more or less. The pokemon are in the order written in the API, though, so it will only add or subtract those that are later in the API.
+
+## Dependencies:
+ 
+The only libraries used for this project were jQuery and a polyfill to make sure the JS code was cross-compatible. It is built from scratch using HTML5, JS, and CSS6 (as well as Bootstrap)
 
 jQuery library: jquery-3.6.0.min.js (see files).
 

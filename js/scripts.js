@@ -84,6 +84,7 @@ let pokemonRepository = (function() {
         pokemon.imageUrl = details.sprites.front_default;
         pokemon.height = details.height;
         pokemon.weight = details.weight;
+        pokemon.types = details.types.typename;
       })
       .catch(function(e) {
         console.error(e);
@@ -111,10 +112,13 @@ let pokemonRepository = (function() {
 
     let weightElement = $("<p>" + "Weight: " + pokemon.weight + "</p>");
 
+    let typeElement = $("<p>" + "Type: " + pokemon.types + "<p>");
+
     modalTitle.append(nameElement);
     modalBody.append(pokemonImage);
     modalBody.append(heightElement);
     modalBody.append(weightElement);
+    modalBody.append(typeElement);
 
     $("#pokemon-modal").modal("toggle");
   }
